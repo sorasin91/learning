@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment - Manipulation</title>
+</head>
+
+<body>
+
+    <script>
+        // Take a sentence from the user.
+        let sentence = prompt("Enter a sentence");
+
+        // Count the number of characters in the sentence.
+        const characterCount = sentence.length;
+
+        // Convert the sentence to uppercase.
+        let uppercase = sentence.toUpperCase();
+
+        //Find and display the position of a specific word in the sentence.
+        let findword = prompt("Enter a word to find");
+        let positionword = sentence.indexOf(findword)
+
+        document.write("Character Count: " + characterCount + "<br>")
+        document.write("Uppercase Sentence: " + uppercase + "<br>")
+        document.write("Position of find word: " + positionword + "<br>")
+
+    </script>
+</body>
+
+</html>
