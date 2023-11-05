@@ -15,12 +15,16 @@
         age = parseInt(prompt("Enter your Age"));
 
         // Categorize the age group
-        let agegroup;
-        if (age < 18) {agegroup = "child";}
+        
+        if (age < 0) {agegroup = "invalid age";}
+        else
+        if (age < 13) {agegroup = "child";}
         else 
+        if (age < 18) {agegroup = "teenager";}
+        else
         if (age < 55) {agegroup = "adult";}
         else
-        {agegroup = "senior citizen" }
+        {agegroup = "senior citizen";}
 
         // Display the result
         document.write("You are " + agegroup)
