@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript assignment - Variable</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Variable</title>
 </head>
+
 <body>
+    <center>
+        <h1>Variable Scope Example</h1>
+    </center>
+
+    <!-- JavaScript -->
     <script>
-        
+        // Global variable
+        let globalVariable = 10;
+        let age = 10;
 
+        // Function demonstrating variable scope
+        function variableScopeExample() {
+            // Local variable
+            let localVariable = 5;
 
+            console.log('Inside function:');
+            console.log('Global variable: ' + globalVariable);
+            console.log('Local variable: ' + localVariable);
 
+            // Modify the global variable
+            globalVariable = 20;
+        }
+
+        // Call the function
+        variableScopeExample();
+
+        console.log('Outside function:');
+        console.log('Global variable: ' + globalVariable);
+
+        console.log(' ');
+        console.log('Same Variable Name');
+
+        // Function demonstrating the same variable name with global and local scope
+        function sameVariableNameExample() {
+            // Local variable with the same name as the global variable
+            let age = 40;
+            console.log('Inside function:');
+            console.log('Local variable: ' + age); 
+
+            // Changing the local variable does not affect the global variable
+            age = 15;
+            console.log('After modifying age value:');
+            console.log('Local variable: ' + age); 
+        }
+
+        // Call the function
+        sameVariableNameExample();
+
+        console.log('Outside function:');
+        console.log('Global age variable: ' + age); 
     </script>
 </body>
+
 </html>
